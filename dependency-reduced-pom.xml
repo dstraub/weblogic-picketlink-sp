@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.ctrlaltdel</groupId>
+  <artifactId>weblogic-picketlink-sp</artifactId>
+  <version>1.0</version>
+  <build>
+    <resources>
+      <resource>
+        <directory>${project.build.sourceDirectory}</directory>
+        <includes>
+          <include>*.xml</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <copy>
+                  <fileset>
+                    <include />
+                  </fileset>
+                </copy>
+                <copy />
+                <path>
+                  <pathelement />
+                  <path />
+                </path>
+                <java>
+                  <arg />
+                  <arg />
+                  <arg />
+                </java>
+                <copy>
+                  <fileset />
+                  <fileset />
+                </copy>
+                <java>
+                  <arg />
+                  <arg />
+                  <arg />
+                </java>
+                <delete />
+                <unjar />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>1.7.1</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>weblogic</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/server/lib/weblogic.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>weblogic.server.merged.jar</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/features/weblogic.server.merged.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wlManagementMBean</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/server/lib/mbeantypes/wlManagementMBean.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>mbeanmaker</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.mbean.maker_2.1.0.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>beangen</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.beangen_2.1.0.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wls-utils</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.utils.full_2.2.0.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wls-veolocity-dep</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.apache.velocity.dep_1.5.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wls-velocity</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.apache.velocity_1.4.1.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wls-apache</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/modules/com.bea.core.apache_3.0.0.0.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>wseeclient</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/server/lib/wseeclient.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>WLSSSecurityProviders</artifactId>
+      <version>12.1.2</version>
+      <scope>system</scope>
+      <systemPath>/Users/ds/Work/db-ipp/wls12120/wlserver/server/lib/mbeantypes/WLSSSecurityProviders.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>com.sun</groupId>
+      <artifactId>tools</artifactId>
+      <version>1.7.0</version>
+      <scope>system</scope>
+      <systemPath>/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/../lib/tools.jar</systemPath>
+    </dependency>
+  </dependencies>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <wlserver.path>/Users/ds/Work/db-ipp/wls12120/wlserver</wlserver.path>
+  </properties>
+</project>
+
